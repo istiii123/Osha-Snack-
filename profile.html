@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profil - Reward Koin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Profil Pengguna</h2>
+
+  <div class="profile-box">
+    <p><strong>Nama:</strong> Andi Koiners</p>
+    <p><strong>Saldo Koin:</strong> <span id="saldoKoin">120</span> koin</p>
+
+    <button onclick="tukarKoin()">Tukar Koin</button>
+  </div>
+
+  <script>
+    function tukarKoin() {
+      let saldo = parseInt(document.getElementById("saldoKoin").textContent);
+      if (saldo >= 50) {
+        saldo -= 50;
+        document.getElementById("saldoKoin").textContent = saldo;
+        alert("Berhasil tukar 50 koin!");
+      } else {
+        alert("Koin tidak cukup untuk penukaran.");
+      }
+    }
+  </script>
+</body>
+</html>
